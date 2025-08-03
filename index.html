@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A comprehensive HTML reference guide demonstrating various HTML elements and features">
+    <meta name="keywords" content="HTML, reference, guide, web development">
+    <meta name="author" content="HTML Learning Guide">
+    
+    <title>Complete HTML Reference Guide</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Text & Headings Section -->
+        <section class="section">
+            <h1>Text & Headings</h1>
+            <!-- This is a comment: Demonstrating different heading levels -->
+            <h1>Main Heading (H1)</h1>
+            <h2>Secondary Heading (H2)</h2>
+            <h3>Tertiary Heading (H3)</h3>
+            <h4>Fourth Level Heading (H4)</h4>
+            <h5>Fifth Level Heading (H5)</h5>
+            <h6>Sixth Level Heading (H6)</h6>
+            
+            <p>This is a regular paragraph with <strong>bold text</strong>, <em>italic text</em>, and <u>underlined text</u>.</p>
+            <p>Here's text with <mark>highlighted content</mark> and <small>small text</small>.</p>
+            <p>Mathematical expressions: H<sub>2</sub>O and E=mc<sup>2</sup></p>
+            
+            <blockquote>
+                "This is a blockquote used for longer quotes or citations."
+                <cite>- Author Name</cite>
+            </blockquote>
+            
+            <div class="code-block">
+                <code>This is inline code</code> and here's a code block:
+                <pre>
+                    function example() {
+                        console.log("Hello World!");
+                    }
+                </pre>
+            </div>
+        </section>
+
+        <!-- Lists Section -->
+        <section class="section">
+            <h2>Lists</h2>
+            
+            <h3>Unordered List</h3>
+            <ul>
+                <li>First item</li>
+                <li>Second item with nested list:
+                    <ul>
+                        <li>Nested item 1</li>
+                        <li>Nested item 2</li>
+                    </ul>
+                </li>
+                <li>Third item</li>
+            </ul>
+            
+            <h3>Ordered List</h3>
+            <ol>
+                <li>First step</li>
+                <li>Second step</li>
+                <li>Third step with nested ordered list:
+                    <ol type="a">
+                        <li>Sub-step A</li>
+                        <li>Sub-step B</li>
+                    </ol>
+                </li>
+            </ol>
+            
+            <h3>Description List</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>HyperText Markup Language</dd>
+                <dt>CSS</dt>
+                <dd>Cascading Style Sheets</dd>
+                <dt>JavaScript</dt>
+                <dd>Programming language for web development</dd>
+            </dl>
+        </section>
+
+        <!-- Links & Navigation Section -->
+        <section class="section">
+            <h2>Links & Navigation</h2>
+            
+            <nav class="nav-menu" role="navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <p>Different types of links:</p>
+            <ul>
+                <li><a href="https://www.example.com" target="_blank" rel="noopener">External link (opens in new tab)</a></li>
+                <li><a href="#top">Internal anchor link</a></li>
+                <li><a href="mailto:example@email.com">Email link</a></li>
+                <li><a href="tel:+1234567890">Phone link</a></li>
+                <li><a href="#" onclick="return false;" title="This is a tooltip">Link with tooltip</a></li>
+            </ul>
+        </section>
+
+        <!-- Images & Media Section -->
+        <section class="section">
+            <h2>Images & Media</h2>
+            
+            <div class="media-container">
+                <!-- Placeholder image using a data URL for a simple colored square -->
+                <img src="image.jpg" 
+                     alt="Sample placeholder image showing a blue rectangle with text" 
+                     title="This is a sample image"
+                     loading="lazy">
+                
+                <figure>
+                    <img src="image.jpg" 
+                         alt="Example image in a figure element">
+                    <figcaption>This is a figure caption describing the image above</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Tables Section -->
+        <section class="section">
+            <h2>Tables (Basic Use)</h2>
+            
+            <table>
+                <caption>Sample Data Table</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">City</th>
+                        <th scope="col">Occupation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>28</td>
+                        <td>New York</td>
+                        <td>Developer</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>32</td>
+                        <td>Los Angeles</td>
+                        <td>Designer</td>
+                    </tr>
+                    <tr>
+                        <td>Bob Johnson</td>
+                        <td>45</td>
+                        <td>Chicago</td>
+                        <td>Manager</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total Employees:</td>
+                        <td colspan="2">3</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- Forms Section -->
+        <section class="section">
+            <h2>Forms</h2>
+            
+            <form action="#" method="post" novalidate>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <div class="form-group">
+                        <label for="fullname">Full Name *</label>
+                        <input type="text" id="fullname" name="fullname" required aria-describedby="name-help">
+                        <small id="name-help">Enter your first and last name</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="example@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" min="18" max="100">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="birthdate">Birth Date</label>
+                        <input type="date" id="birthdate" name="birthdate">
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Preferences</legend>
+                    
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                            <option value="">Select a country</option>
+                            <option value="in">India</option>
+                            <option value="us">United States</option>
+                            <option value="jp">Japan</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <fieldset>
+                            <legend>Interests (Check all that apply)</legend>
+                            <label>
+                                <input type="checkbox" name="interests" value="tech"> Technology
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interests" value="sports"> Sports
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interests" value="music"> Music
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interests" value="travel"> Travel
+                            </label>
+                        </fieldset>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Enter your message here..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="file-upload">Upload File</label>
+                        <input type="file" id="file-upload" name="file-upload" accept=".pdf,.doc,.docx">
+                    </div>
+                </fieldset>
+                
+                <button type="submit">Submit Form</button>
+                <button type="reset">Reset Form</button>
+            </form>
+        </section>
+
+        <!-- Semantic Tags Section -->
+        <section class="section">
+            <h2>Semantic Tags (HTML5)</h2>
+            
+            <header>
+                <h3>Header Element</h3>
+                <p>This represents introductory content or navigation aids.</p>
+            </header>
+            
+            <main>
+                <article>
+                    <header>
+                        <h3>Article Title</h3>
+                        <time datetime="2024-01-15">January 15, 2024</time>
+                    </header>
+                    
+                    <p>This is an article element representing a standalone piece of content.</p>
+                    
+                    <section>
+                        <h4>Article Section</h4>
+                        <p>This section is part of the article above.</p>
+                    </section>
+                </article>
+                
+                <aside>
+                    <h4>Sidebar Content</h4>
+                    <p>This aside element contains content related to the main content but separate from it.</p>
+                </aside>
+            </main>
+            
+            <footer>
+                <h4>Footer Element</h4>
+                <p>This represents footer information for its nearest sectioning content.</p>
+                <address>
+                    Contact: <a href="mailto:contact@example.com">contact@example.com</a>
+                </address>
+            </footer>
+        </section>
+
+        <!-- Attributes Section -->
+        <section class="section">
+            <h2>Attributes</h2>
+            
+            <div class="highlight">
+                <h3>Common HTML Attributes Examples:</h3>
+                <ul>
+                    <li><strong>id:</strong> <span id="unique-id">Unique identifier</span></li>
+                    <li><strong>class:</strong> <span class="highlight">CSS class for styling</span></li>
+                    <li><strong>title:</strong> <span title="This is a tooltip">Hover for tooltip</span></li>
+                    <li><strong>data-* attributes:</strong> <span data-info="custom data" data-value="123">Custom data attributes</span></li>
+                    <li><strong>lang:</strong> <span lang="es">Hola mundo</span> (Spanish text)</li>
+                    <li><strong>contenteditable:</strong> <p contenteditable="true" style="border: 1px dashed #ccc; padding: 10px;">You can edit this text!</p></li>
+                    <li><strong>hidden:</strong> <span>There's hidden content here:</span> <span hidden>This text is hidden</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Div & Span Section -->
+        <section class="section">
+            <h2>Div & Span</h2>
+            
+            <div style="background: #e9ecef; padding: 15px; border-radius: 5px;">
+                <h3>Div Element (Block-level)</h3>
+                <p>This paragraph is inside a div. The <span style="color: red; font-weight: bold;">span element</span> is inline and used for styling specific parts of text within this paragraph.</p>
+                
+                <div style="background: white; padding: 10px; margin: 10px 0; border-left: 4px solid #007bff;">
+                    <p>Nested div with different styling. <span style="background: yellow;">Highlighted span text</span> within the nested content.</p>
+                </div>
+            </div>
+            
+            <p>Outside the div: Here's text with <span class="highlight" style="display: inline-block; padding: 5px;">styled span elements</span> and <span style="text-decoration: underline;">more inline styling</span>.</p>
+        </section>
+
+        <!-- Comments Section -->
+        <section class="section">
+            <h2>Comments</h2>
+            
+            <div class="code-block">
+                <!-- This is an HTML comment - it won't be displayed on the page -->
+                <p>HTML comments are written like this:</p>
+                <p><strong>&lt;!-- This is a comment --&gt;</strong></p>
+                <p>Comments are useful for:</p>
+                <ul>
+                    <li>Adding notes for developers</li>
+                    <li>Temporarily hiding content</li>
+                    <li>Documenting code sections</li>
+                    <li>Adding TODO reminders</li>
+                </ul>
+                <!-- TODO: Add more comment examples -->
+            </div>
+        </section>
+
+        <!-- Accessibility Basics Section -->
+        <section class="section">
+            <h2>Accessibility Basics</h2>
+            
+            <div class="highlight">
+                <h3>Accessibility Features Demonstrated:</h3>
+                
+                <h4>Semantic HTML</h4>
+                <p>Using proper heading hierarchy (h1, h2, h3, etc.) and semantic elements like &lt;header&gt;, &lt;main&gt;, &lt;article&gt;, &lt;nav&gt;.</p>
+                
+                <h4>Alternative Text</h4>
+                <p>All images have descriptive alt attributes for screen readers.</p>
+                
+                <h4>Form Labels</h4>
+                <p>Every form input has an associated label using the "for" attribute.</p>
+                
+                <h4>ARIA Labels</h4>
+                <nav aria-label="Accessibility example navigation">
+                    <ul>
+                        <li><a href="#" aria-describedby="link-help">Accessible Link</a></li>
+                        <li><a href="#" role="button" aria-pressed="false">Toggle Button</a></li>
+                    </ul>
+                </nav>
+                <div id="link-help" class="sr-only">This link demonstrates ARIA description</div>
+                
+                <h4>Keyboard Navigation</h4>
+                <p>All interactive elements can be accessed via keyboard (Tab, Enter, Space).</p>
+                
+                <h4>Color Contrast</h4>
+                <p>Text maintains sufficient contrast ratios for readability.</p>
+                
+                <h4>Screen Reader Support</h4>
+                <div role="region" aria-labelledby="sr-heading">
+                    <h4 id="sr-heading">Screen Reader Friendly Content</h4>
+                    <p>This content is properly structured for screen readers with roles and labels.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Skip link for accessibility (usually positioned absolutely at top) -->
+    <a href="#main-content" class="sr-only" style="position: absolute; top: -40px; left: 6px; z-index: 1000; padding: 8px; background: #000; color: #fff; text-decoration: none;">Skip to main content</a>
+
+    <script>
+        // Simple JavaScript to demonstrate interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add some interactive behavior
+            const toggleButton = document.querySelector('[role="button"][aria-pressed]');
+            if (toggleButton) {
+                toggleButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pressed = this.getAttribute('aria-pressed') === 'true';
+                    this.setAttribute('aria-pressed', !pressed);
+                    this.textContent = pressed ? 'Toggle Button' : 'Toggled!';
+                });
+            }
+            
+            // Form validation example
+            const form = document.querySelector('form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Form submitted successfully! (This is just a demo)');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
